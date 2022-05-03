@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: task-tiering-onprem-overview.html 
+keywords: overview, tiering overview, tiered clusters, clusters enabled for tiering, data tiering overview, cold data, hot data, tiered data, savings, savings opportunities, saving opportunity, policies, cold snapshots, all dp user data, cold user data & snapshots, cold user data and snapshots, all user data, no policy, marketplace subscriptions, clusters associated 
+summary: 雲端分層提供從每個內部部署叢集進行資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。 
+---
+= 從叢集取得資料分層的總覽
+:toc: macro
+:hardbreaks:
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+雲端分層提供從每個內部部署叢集進行資料分層的彙總檢視。本總覽提供清楚的環境概況、並可讓您採取適當行動。
+
+雲端分層提供下列環境詳細資料：
+
+image:screenshot_tiering_onprem_overview.gif["「內部部署總覽」頁面的快照。"]
+
+作用中叢集:: 目前正在將資料分層至雲端的叢集數目、未將資料分層至雲端的叢集數目、以及不支援資料分層的叢集數目。
+資料總覽:: 分層至雲端的資料量、以及叢集上的熱和冷資料量。
+總節約額:: 將資料分層儲存至雲端所節省的金額、以及將更多資料分層儲存至雲端所能節省的金額。
+原則:: 每個分層原則套用至磁碟區的次數。
+市場訂閱:: 與每種 Marketplace 訂購類型相關聯的叢集數目、以及您的訂購狀態指示。
+
+
+.步驟
+. 按一下 * 分層 > 內部部署總覽 * 。
+

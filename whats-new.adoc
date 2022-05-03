@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, tiering' 
+summary: 瞭解雲端分層的新功能。 
+---
+= 雲端分層的新功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+瞭解雲端分層的新功能。
+
+
+
+== 2022年4月4日
+
+
+
+=== Amazon S3 Glacier立即擷取儲存類別現已推出
+
+設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。
+
+
+
+=== Cloud Tiering已完全符合ONTAP Select 資格、可在不同步系統上執行
+
+除了將資料從AFF 您的功能區和FAS 功能區系統分層、現在您可以將非作用中的資料從ONTAP Select 您的功能區系統分層處理至雲端儲存設備。
+
+
+
+== 2021年9月2日
+
+
+
+=== Cloud Tiering BYOL授權取代FabricPool 了不含功能的授權
+
+雲端分層服務的Cloud Manager支援分層組態、現在提供全新的* Cloud Tiering *授權。這是一種浮動授權、您可以在多ONTAP 個內部部署的叢集上使用。您過去可能使用的* FabricPool 僅保留給Cloud Manager不支援的組態。
+
+https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license["深入瞭解新的雲端分層授權"]。
+
+
+
+=== 將非作用中資料從內部ONTAP 的支援叢集分成S3相容的物件儲存設備
+
+現在、您可以將非作用中資料分層至任何使用簡易儲存服務（S3）傳輸協定的物件儲存服務。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-s3-compat.html["瞭解如何將資料分層至S3相容的物件儲存設備"]。
+
+
+
+== 2021年7月7日
+
+
+
+=== 將資料分層至Azure Blob儲存設備時、連接器可在內部環境中執行
+
+您不再需要使用安裝在Azure vnet中的Connector。將資料分層存放至Azure Blob儲存設備時、連接器可在內部部署的主機上執行。
+
+
+
+== 2021年6月7日
+
+
+
+=== 某些雲端供應商儲存設備現在有新的分層課程可供使用
+
+在早期版本中、您可以在使用Amazon S3或Google Cloud物件儲存設備30天後、將階層式資料從Standard儲存類別移轉至其他儲存類別。此版本新增了一些新功能：
+
+* 您可以選擇階層式資料移至更具成本效益層的天數。這稱為資料「生命週期管理」。
+* Azure Blob現在支援_cow_存取層。
+* Google Cloud Storage支援隨著時間推移、將階層式資料移至多個儲存層。例如、您可以在45天後將階層式資料從_Standard_類別移至_Nearlin__類別、然後在75天後移至_Coldlin__類別、然後在270天後移至_Archive_類別。
+
+
+
+
+=== 現在、您可以主動將資料從雲端層移回效能層
+
+如果您想要停止在磁碟區上使用分層功能、或是決定將所有使用者資料保留在效能層上、但將Snapshot複本保留在雲端層上、則此功能非常實用。此功能可在使用ONTAP 更新版本的資訊時使用。
+
+瞭解如何操作 link:task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier["將資料移回效能層"]。
+
+
+
+== 2021年5月2日
+
+
+
+=== 現在、您可以在套用分層原則時選取所有磁碟區
+
+當您從ONTAP 某個功能區系統中選取要分層的磁碟區時、「層級磁碟區」頁面中會有一個核取方塊、可選取*全部*磁碟區、以便更輕鬆地將相同的原則套用至所有磁碟區。 link:task-managing-tiering.html#tiering-data-from-additional-volumes["請參閱如何選取叢集中的所有磁碟區"]。
+
+
+
+=== 「冷卻」天數現在可設定為183天
+
+如果您需要變更「冷卻天數」、以決定磁碟區中的資料在移至物件儲存設備之前必須保持停用狀態的時間、現在您可以指定使用ONTAP 率為9.8或更新版本時、最多可保留183天（從63天起）。
+
+
+
+== 2021年3月8日
+
+
+
+=== 生命週期規則現在可在分層至Google Cloud Storage時使用
+
+分層至Google Cloud Storage時、您可以套用生命週期規則、以便在30天後、將階層式資料從標準儲存類別轉換為成本較低的Nearline、Coldline或歸檔儲存設備。

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-tiering-test.html 
+keywords: throughput, latency, tiering performance, cloud performance test, tiering test, object storage performance 
+summary: 執行雲端效能測試、以測量ONTAP 設定資料分層之前和之後、從VMware叢集到物件存放區的網路延遲和處理量效能。 
+---
+= 測量網路延遲與處理量效能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+執行雲端效能測試、以測量ONTAP 設定資料分層之前和之後、從VMware叢集到物件存放區的網路延遲和處理量效能。測試也會識別任何發生的故障。
+
+以下是效能結果範例：
+
+image:screenshot_cloud_performance_test.gif["雲端效能測試叢集效能結果的快照。"]
+
+當叢集的CPU使用率低於50%時、最好執行此檢查。
+
+.尚未設定分層的叢集步驟
+. 在 Cloud Manager 頂端、按一下 * 分層 * 。
+. 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*雲端效能測試*。
+. 檢閱詳細資料、然後按一下*繼續*。
+. 依照提示提供必要資訊。
++
+您需要提供的資訊與在叢集上設定分層相同。
+
+. （可選）繼續到「層級磁碟區」精靈以完成設定。
+
+
+.已設定分層的叢集步驟
+. 在 Cloud Manager 頂端、按一下 * 分層 * 。
+. 在*叢集儀表板*中、按一下叢集的功能表圖示、然後選取*雲端效能測試*。
+. 從下拉式清單中選取節點。
+. 檢視結果或重新檢查效能。
+

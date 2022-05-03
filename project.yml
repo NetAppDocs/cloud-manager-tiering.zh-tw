@@ -1,0 +1,109 @@
+---
+settings:
+  name: Cloud Tiering
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: 所有Cloud Manager文件
+    url: https://docs.netapp.com/us-en/cloud-manager-family
+  - title: 雲端分層文件
+    url: "/index.html"
+  - title: 版本資訊
+    url: "/whats-new.html"
+  - title: 開始使用
+    entries:
+    - title: 深入瞭解雲端分層
+      url: "/concept-cloud-tiering.html"
+    - title: 將內部部署資料分層至雲端
+      entries:
+      - title: 層級至Amazon S3
+        url: "/task-tiering-onprem-aws.html"
+      - title: 層級至Azure Blob儲存設備
+        url: "/task-tiering-onprem-azure.html"
+      - title: 分層至Google Cloud Storage
+        url: "/task-tiering-onprem-gcp.html"
+      - title: 階層對StorageGRID 階層
+        url: "/task-tiering-onprem-storagegrid.html"
+      - title: 階層至S3物件儲存
+        url: "/task-tiering-onprem-s3-compat.html"
+    - title: 設定授權
+      url: "/task-licensing-cloud-tiering.html"
+    - title: 常見問題集
+      url: "/faq-cloud-tiering.html"
+  - title: 使用雲端分層
+    entries:
+    - title: 測試雲端效能
+      url: "/task-tiering-test.html"
+    - title: 管理資料分層
+      url: "/task-managing-tiering.html"
+    - title: 檢視所有叢集的分層概述
+      url: "/task-tiering-onprem-overview.html"
+    - title: 參考資料
+      entries:
+      - title: 支援的 Amazon S3 儲存類別和地區
+        url: "/reference-aws-support.html"
+      - title: 支援的 Azure 存取層級和地區
+        url: "/reference-azure-support.html"
+      - title: 支援的 Google Cloud 儲存類別和地區
+        url: "/reference-google-support.html"
+  - title: 知識與支援
+    entries:
+    - title: 註冊以取得支援
+      url: "/task-support-registration.html"
+    - title: 取得協助
+      url: "/task-get-help.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 開始使用
+    links:
+    - title: 深入瞭解雲端分層
+      url: concept-cloud-tiering.html
+    - title: 新增功能
+      url: whats-new.html
+    - title: 設定授權
+      url: task-licensing-cloud-tiering.html
+  - title: 將ONTAP 內部資源的資料分層至雲端
+    links:
+    - title: 層級至Amazon S3
+      url: task-tiering-onprem-aws.html
+    - title: 層級至Azure Blob
+      url: task-tiering-onprem-azure.html
+    - title: 分層至Google Cloud
+      url: task-tiering-onprem-gcp.html
+    - title: 階層對StorageGRID 階層
+      url: task-tiering-onprem-storagegrid.html
+    - title: 分層至一般S3
+      url: task-tiering-onprem-s3-compat.html
+  - title: 管理分層設定
+    links:
+    - title: 變更磁碟區的分層原則
+      url: task-managing-tiering.html#changing-a-volumes-tiering-policy
+    - title: 檢閱叢集的分層資訊
+      url: task-managing-tiering.html#reviewing-tiering-info-for-a-cluster
+    - title: 從其他磁碟區分層資料
+      url: task-managing-tiering.html#tiering-data-from-additional-volumes
+    - title: 將資料從雲端移回效能層
+      url: task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier
+    - title: 管理Aggregate上的分層設定
+      url: task-managing-tiering.html#managing-tiering-settings-on-aggregates
+  - title: 部落格社群
+    links:
+    - title: NetApp社群
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Cloud Central部落格
+      url: https://cloud.netapp.com/blog
+    - title: 雲端網路研討會
+      url: https://cloud.netapp.com/events
+  - title: 其他資源
+    links:
+    - title: Cloud Central使用案例
+      url: https://cloud.netapp.com/cloud-tiering
+product-family: {}
