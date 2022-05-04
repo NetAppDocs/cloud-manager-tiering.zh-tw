@@ -691,7 +691,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:04:06 +0000">05/03/2022</time>
+    <time datetime="2022-05-04 13:04:09 +0000">05/04/2022</time>
     
   
 
@@ -850,10 +850,10 @@ Your browser does not support the video tag.
 <div class="sect2">
 <h3 id="新的雲端分層byol授權自2021年8月21日起生效">新的雲端分層BYOL授權自2021年8月21日起生效</h3>
 <div class="paragraph">
-<p>全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容的物件儲存設備、StorageGRID 以及</p>
+<p>全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容物件儲存設備、IBM Cloud Object Storage及StorageGRID</p>
 </div>
 <div class="paragraph">
-<p>您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《<strong>環</strong>》授權ONTAP 僅適用於ONTAP 無法存取網際網路的站台（又稱為「暗站」）中的非執行部署。如果您部署的是深度站台、您將FabricPool 會使用System Manager或ONTAP CLI在每個叢集上安裝一份「版本資訊」授權。</p>
+<p>您過去將內部部署的內部資料分層保存到雲端時、可能FabricPool 使用的*《<strong>環</strong>》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、MetroCluster 或使用FabricPool 「鏡射鏡射」的非執行系統。如果您使用這些組態、您將FabricPool 會使用System Manager或ONTAP CLI、在每個叢集上安裝一個版本資訊技術授權。</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1034,6 +1034,105 @@ Your browser does not support the video tag.
 </div>
 <div class="paragraph">
 <p>Cloud Manager會更新授權、讓您的雲端分層服務持續運作。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="將雲端分層授權套用至特殊組態的叢集">將雲端分層授權套用至特殊組態的叢集</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>下列組態的叢集可使用雲端分層授權、但套用方式必須與典型的單節點和HA組態的等叢集不同：ONTAP ONTAP</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>分層鏡射組態中的叢集（連接至兩個物件存放區的叢集）</p>
+<div class="paragraph">
+<p>目前不支援使用鏡射功能的支援FabricPool MetroCluster</p>
+</div>
+</li>
+<li>
+<p>分層至IBM Cloud Object Storage的叢集</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="現有叢集的程序fabricpool-若叢集具有不含更新授權">現有叢集的程序FabricPool 、若叢集具有不含更新授權</h3>
+<div class="paragraph">
+<p>當您 <a href="task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering">"在雲端分層中探索這些特殊的叢集類型"</a>、Cloud Tiering可辨識FabricPool 出此功能的不一致性、並將授權新增至Digital Wallet。這些叢集將繼續如常分層資料。當「不適用」授權到期時、您必須購買雲端分層授權。FabricPool</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="新建立叢集的程序">新建立叢集的程序</h3>
+<div class="paragraph">
+<p>當您在雲端分層中發現典型叢集時、就會使用雲端分層介面來設定分層。在這些情況下、會發生下列動作：</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>「父」雲端分層授權會追蹤所有叢集用於分層的容量、以確保授權有足夠的容量</p>
+</li>
+<li>
+<p>每個叢集都會自動安裝「子」分層授權、以便與Digital Wallet中的「父」授權通訊</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>對於上述兩種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-tiering/images/tip.svg" alt="提示">
+</td>
+<td class="content">
+由於資料已分層至兩個不同的物件儲存位置、以進行分層鏡射組態、因此您必須購買具有足夠容量的授權、才能將資料分層至兩個位置。
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">步驟</div>
+<ol class="arabic">
+<li>
+<p>使用System Manager或CLI安裝及設定ONTAP 您的靜態叢集ONTAP 。</p>
+<div class="paragraph">
+<p>此時請勿設定分層。</p>
+</div>
+</li>
+<li>
+<p><a href="task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license">"購買雲端分層授權"</a> 以取得新叢集或叢集所需的容量。</p>
+</li>
+<li>
+<p>在Cloud Manager中、 <a href="task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account">"將授權新增至Digital Wallet"</a>。</p>
+</li>
+<li>
+<p>在雲端分層、 <a href="task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering">"探索新叢集"</a>。</p>
+</li>
+<li>
+<p>在叢集儀表板中、按一下 <span class="image"><img src="./media/screenshot_horizontal_more_button.gif" alt="更多圖示"></span> 針對叢集、選取*部署授權*。</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_tiering_deploy_license.png" alt="快照顯示如何將分層授權部署至ONTAP 某個叢集。"></span></p>
+</div>
+</li>
+<li>
+<p>在「<em>部署授權</em>」對話方塊中、按一下「<strong>部署</strong>」。</p>
+<div class="paragraph">
+<p>子授權會部署至ONTAP 整個叢集。</p>
+</div>
+</li>
+<li>
+<p>返回System Manager或ONTAP the不確定的CLI、然後設定分層組態。</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/manage-mirrors-task.html" target="_blank" rel="noopener">"鏡射組態資訊FabricPool"</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html" target="_blank" rel="noopener">"分層至IBM Cloud Object Storage資訊"</a></p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>

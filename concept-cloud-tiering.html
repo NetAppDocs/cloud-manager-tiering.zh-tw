@@ -691,7 +691,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:04:06 +0000">05/03/2022</time>
+    <time datetime="2022-05-04 13:04:09 +0000">05/04/2022</time>
     
   
 
@@ -707,19 +707,10 @@
 <p>Cloud Tiering 服務運用 <em>Estr_</em> 的功能 FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。</p>
 </div>
 <div class="paragraph">
-<p>原支援AFF 採用FAS All SSD集合體的支援功能、ONTAP 從功能齊全的支援功能中、從功能齊全的HDD集合體、再加上高效能SSD、即可將資料分層處理。請參閱 <a href="https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html" target="_blank" rel="noopener">"使用過程中的考量與要求FabricPool"</a> 以取得詳細資料。</p>
+<p>原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱 <a href="https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html" target="_blank" rel="noopener">"使用過程中的考量與要求FabricPool"</a> 以取得詳細資料。</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-tiering/images/tip.svg" alt="提示">
-</td>
-<td class="content">
-支援在支援的雲端分層功能包括AFF ：FAS ONTAP Select
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>雲端分層授權也可與FabricPool 採用「鏡射」組態（MetroCluster 不包括「非」組態）的叢集共享。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是 <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations">"這類叢集的授權是使用雲端分層來完成。"</a></p>
 </div>
 </div>
 </div>
@@ -792,6 +783,9 @@
 <p>NetApp StorageGRID</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或不含任何功能的CLI來完成此組態設定、FabricPool ONTAP 但是 <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations">"此類組態的授權是使用雲端分層來完成。"</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
