@@ -198,8 +198,6 @@
   <block id="36afa058c74d288178950c27927bdb38" category="doc">深入瞭解雲端分層</block>
   <block id="647439c1467c8118206ec0bd264e5f44" category="paragraph">Cloud Tiering 服務運用 _Estr__ 的功能 FabricPool 。NetApp Data Fabric 技術可自動將資料分層至低成本的物件儲存設備。 FabricPool作用中（熱）資料會保留在本機層（內部部署ONTAP 的資訊集合體）、而非作用中（冷）資料則移至雲端層、同時維持ONTAP 資料效率不變。</block>
   <block id="ec0515a8a06c1c0cf10efc6cbb1bfab9" category="inline-link">使用過程中的考量與要求FabricPool</block>
-  <block id="2e1c93e13afa4226049aaf573620580e" category="paragraph">原支援AFF 採用FAS All SSD集合體的支援功能、ONTAP 從功能齊全的支援功能中、從功能齊全的HDD集合體、再加上高效能SSD、即可將資料分層處理。請參閱<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 以取得詳細資料。</block>
-  <block id="ba7f44ea95b8ea6bdfe58a881b0dbc4d" category="admonition">支援在支援的雲端分層功能包括AFF ：FAS ONTAP Select</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="c6a7db5c25117c443a476e127b47fb7e" category="paragraph">雲端分層提供自動化、監控、報告及通用管理介面：</block>
   <block id="e06e7e77771ffb8d53ca2e5570304aa3" category="list-text">自動化可讓您更輕鬆地設定及管理從內部 ONTAP 物件叢集到雲端的資料分層</block>
@@ -309,7 +307,6 @@
   <block id="6fcd419d9b16c5368ab2877625e80567" category="inline-link-macro">將內部部署ONTAP 的資料叢集分層、以儲存S3物件</block>
   <block id="d50216d7a2176675e25061e3259b0fb1" category="list-text"><block ref="d50216d7a2176675e25061e3259b0fb1" category="inline-link-macro-rx"></block></block>
   <block id="7beb276ec918c2d8eb132df5ed6fe576" category="section-title">支援哪些類型的不完整系統？ONTAP</block>
-  <block id="9b07339421cb8fc38c122eac748e7d25" category="paragraph">支援從功能性、功能性和功能性等系統進行雲端分層AFF 。FAS ONTAP Select</block>
   <block id="e6665ff477e45a0cedda0dbc3bab0e98" category="section-title">雲端分層是否能啟用非作用中的資料報告？</block>
   <block id="8b1c9ee3f402b49f0590fe82777e52c0" category="paragraph">是的、雲端分層可在每個 Aggregate 上啟用非作用中資料報告。此設定可讓我們識別可分層至低成本物件儲存的非使用中資料量。</block>
   <block id="cfc2bd864df293e5fa96159d48f1bf8a" category="admonition">如果叢集執行 ONTAP 的是 32 或更新版本、雲端分層可在 HDD 集合體上啟用非作用中資料報告功能。</block>
@@ -321,7 +318,6 @@
   <block id="670aaecb1a526fbed439dad3ec353a96" category="section-title">物件儲存</block>
   <block id="6145ae0abac8e546e57c1ba1c83ea8f8" category="paragraph">下列問題與物件儲存有關。</block>
   <block id="8dc2f269c974385fca1dd7d4bf3a051f" category="section-title">支援哪些物件儲存供應商？</block>
-  <block id="25d34ec058b5c4a2dc5896e71520c30a" category="paragraph">支援Amazon S3、Azure Blob儲存設備、Google Cloud Storage、NetApp StorageGRID 功能區和S3相容的物件儲存供應商。</block>
   <block id="aebd5d0546886eb95ec68319ef820add" category="section-title">我可以使用自己的桶 / 容器嗎？</block>
   <block id="810cfe74648d752af199cb664dfa9bfe" category="paragraph">是的、您可以。當您設定資料分層時、可以選擇新增庫位 / 容器、或是選取現有的庫位 / 容器。</block>
   <block id="a1d779f1e2893c12885589862adf575b" category="section-title">支援哪些地區？</block>
@@ -433,7 +429,6 @@
   <block id="ad9a656fa18a582d87590e28dce5af00" category="doc">雲端分層的新功能</block>
   <block id="ad806d4b803a5aa7358400786d14dec0" category="section-title">2022年4月4日</block>
   <block id="6cb8333618f00b139da255e7f5a82ea0" category="section-title">Amazon S3 Glacier立即擷取儲存類別現已推出</block>
-  <block id="073223fc83a8b7f1f274f1af1f635f2f" category="paragraph">設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。</block>
   <block id="199090bb5d58df554b18a5cb68acb0b7" category="section-title">Cloud Tiering已完全符合ONTAP Select 資格、可在不同步系統上執行</block>
   <block id="a74220a8acc78d1041352afb305af18f" category="paragraph">除了將資料從AFF 您的功能區和FAS 功能區系統分層、現在您可以將非作用中的資料從ONTAP Select 您的功能區系統分層處理至雲端儲存設備。</block>
   <block id="d798cbf5a08fbeb9fdd3652e5b00bb4c" category="section-title">2021年9月2日</block>
@@ -649,8 +644,6 @@
   <block id="72899f4178ab51a60b88e578be4f92f1" category="paragraph">或者、如果Cloud Volumes ONTAP 您擁有不使用的未指派節點型支援、您可以將其轉換成具有相同金額等同和相同到期日的雲端分層授權。<block ref="c110e5a4a66d7429a8ced7dc2264a8f5" category="inline-link-rx"></block>。</block>
   <block id="3868e848af85900de1f54ff09666ee69" category="paragraph">您可以使用Cloud Manager中的「Digital Wallet」頁面來管理雲端分層BYOL授權。您可以新增授權並更新現有授權。</block>
   <block id="52cae96a75c3f07b159891ff3d6a95c0" category="section-title">新的雲端分層BYOL授權自2021年8月21日起生效</block>
-  <block id="85ae9bef317bd3c11475e84eb54944db" category="paragraph">全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容的物件儲存設備、StorageGRID 以及</block>
-  <block id="02314cdf232761d74eff28877a685faa" category="paragraph">您過去將內部部署的各項資料分層保存至雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路的站台（又稱為「暗站」）中的非執行部署。如果您部署的是深度站台、您將FabricPool 會使用System Manager或ONTAP CLI在每個叢集上安裝一份「版本資訊」授權。</block>
   <block id="b5a6f9ddeef29501280ea54ee2e1a6a9" category="admonition">請注意、分層至StorageGRID 不需要FabricPool 使用功能不全的或雲端分層授權。</block>
   <block id="63b75697f87dc9e5a0f1c93ebf6056b5" category="paragraph">如果您目前使用FabricPool 的是「非功能性授權」、FabricPool 則除非您的不含功能性授權達到到期日或最大容量、否則不會受到影響。如需更新授權、請聯絡NetApp、或是更早更新授權、以確保您將資料分層至雲端的能力不會中斷。</block>
   <block id="718a81b2bb7ab3ba5eaabdc569ee059d" category="list-text">如果您使用的是Cloud Manager支援的組態、FabricPool 則您的支援將轉換成Cloud Tiering授權、這些授權將會顯示在Digital Wallet中。當初始授權過期時、您需要更新雲端分層授權。</block>
@@ -928,4 +921,52 @@
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
   <block id="4c7d5d7dfde4a7bd82b54348182043d3" category="sidebar">其他資源</block>
   <block id="cc81b1698333ba727fd5bde305c3cf08" category="sidebar">Cloud Central使用案例</block>
+  <block id="fd01295dbf857b2bc6bcef4166b23207" category="paragraph">原支援AFF 採用FAS All SSD集合體的支援功能、從ONTAP Select VMware 9.8開始ONTAP 、除了高效能SSD之外、您也可以從由HDD組成的集合體來分層資料。請參閱<block ref="6b92341e29e5578d52c0690ebbf4bdb7" category="inline-link-rx"></block> 以取得詳細資料。</block>
+  <block id="2435df85f1fbddfaa74ed9d9b389396e" category="inline-link">這類叢集的授權是使用雲端分層來完成。</block>
+  <block id="602d3c419c8a2f0671f1f332facbd3f6" category="paragraph">雲端分層授權也可與FabricPool 採用「鏡射」組態（MetroCluster 不包括「非」組態）的叢集共享。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是<block ref="f01d00e65c71afcc96316056bf32ae1d" category="inline-link-rx"></block></block>
+  <block id="17284df03fb9788b01cced519aa7b242" category="inline-link">此類組態的授權是使用雲端分層來完成。</block>
+  <block id="41229158c41a9daeb4112753b1bf2ea1" category="paragraph">雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或不含任何功能的CLI來完成此組態設定、FabricPool ONTAP 但是<block ref="ed2970faba694b446adb4cf5afc34bcc" category="inline-link-rx"></block></block>
+  <block id="dcc42a339dcf66c4ea4b130eaa04710e" category="paragraph">單節點和高可用度AFF 的堆疊支援雲端分層功能、包括：FAS ONTAP Select也支援使用「鏡射鏡射」組態的叢集FabricPool 、但組態必須使用System Manager或ONTAP CLI來完成。</block>
+  <block id="dfbee056730af589714f6061683bf3c8" category="paragraph">雲端分層支援下列物件儲存供應商：</block>
+  <block id="5463fae7936bec29b8ec624ad9b684b3" category="list-text">IBM Cloud物件儲存設備（FabricPool 但必須使用System Manager或ONTAP CLI完成此功能的不實組態設定）</block>
+  <block id="d3e8cd2e370974f27de1b310b4aa8cb3" category="section-title">2022年5月3日</block>
+  <block id="a74300b6b08791dda4f54d473a58e17a" category="section-title">雲端分層授權支援、可用於其他叢集組態</block>
+  <block id="afacb33ad65bcd63eb15aeba04b4aed0" category="inline-link">瞭解如何授權及設定這些類型的叢集。</block>
+  <block id="4675a948ea93098e22976c0848737e1a" category="paragraph">雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。<block ref="4e8c6c7f1b8cf8bbca1bc62528b46ae2" category="inline-link-rx"></block></block>
+  <block id="75ad6cd4979a906c67e27abc9ee1c14e" category="inline-link">請參閱支援的S3儲存類別。</block>
+  <block id="d3028cb26dae3dbde1ec068c17d15383" category="paragraph">設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。<block ref="99f36cc81f33df65a0349e719000fada" category="inline-link-rx"></block></block>
+  <block id="c37d8d783a15bb3dc29d360fd96058fa" category="paragraph">全新的*雲端分層*授權於2021年8月推出、適用於使用雲端分層服務的Cloud Manager所支援的分層組態。Cloud Manager目前支援分層至下列雲端儲存設備：Amazon S3、Azure Blob儲存設備、Google Cloud Storage、S3相容物件儲存設備、IBM Cloud Object Storage及StorageGRID</block>
+  <block id="6ddd4d2b3e22e1f0dbfa3f2cfb99611d" category="paragraph">您過去將內部部署的內部資料分層保存到雲端時、可能FabricPool 使用的*《*環*》授權ONTAP 僅適用於ONTAP 無法存取網際網路（又稱為「暗點」）的站台、MetroCluster 或使用FabricPool 「鏡射鏡射」的非執行系統。如果您使用這些組態、您將FabricPool 會使用System Manager或ONTAP CLI、在每個叢集上安裝一個版本資訊技術授權。</block>
+  <block id="d99641589694e93765fada1790db2a0e" category="section-title">將雲端分層授權套用至特殊組態的叢集</block>
+  <block id="418b697bde99089a773007515cb577ff" category="paragraph">下列組態的叢集可使用雲端分層授權、但套用方式必須與典型的單節點和HA組態的等叢集不同：ONTAP ONTAP</block>
+  <block id="ec4ebd20c319e970c3f59b1f47802c0b" category="list-text">分層鏡射組態中的叢集（連接至兩個物件存放區的叢集）</block>
+  <block id="6d495d0178eaa5b62f4c916a1b7fcfc4" category="paragraph">目前不支援使用鏡射功能的支援FabricPool MetroCluster</block>
+  <block id="04b39654e6e5a443553195d1e2779190" category="list-text">分層至IBM Cloud Object Storage的叢集</block>
+  <block id="c8fe0ffee9071759c56b9a7d98bae676" category="section-title">現有叢集的程序FabricPool 、若叢集具有不含更新授權</block>
+  <block id="1451b23352470f925dac87a3da139fca" category="inline-link-macro">在雲端分層中探索這些特殊的叢集類型</block>
+  <block id="f9e397eb4495d4b3c8a7097b4ea8b610" category="paragraph">當您 <block ref="20b85fbda0982633cbcc10be992f4ea5" category="inline-link-macro-rx"></block>、Cloud Tiering可辨識FabricPool 出此功能的不一致性、並將授權新增至Digital Wallet。這些叢集將繼續如常分層資料。當「不適用」授權到期時、您必須購買雲端分層授權。FabricPool</block>
+  <block id="eb5050df74a7237bec4864cad6113b55" category="section-title">新建立叢集的程序</block>
+  <block id="9cf61e4fc9ad253b398c1c3be905176d" category="paragraph">當您在雲端分層中發現典型叢集時、就會使用雲端分層介面來設定分層。在這些情況下、會發生下列動作：</block>
+  <block id="dc0f43ea8bf22779955c42555129035b" category="list-text">「父」雲端分層授權會追蹤所有叢集用於分層的容量、以確保授權有足夠的容量</block>
+  <block id="c2b88dd33c3d9222a13179594b55f74e" category="list-text">每個叢集都會自動安裝「子」分層授權、以便與Digital Wallet中的「父」授權通訊</block>
+  <block id="5c47f5b94c062cb59e1084e7104a35ad" category="paragraph">對於上述兩種組態、您需要使用System Manager或ONTAP CLI（而非使用Cloud Tiering介面）來設定分層。因此在這些情況下、您必須從雲端分層介面手動將「子」授權推送至這些叢集。</block>
+  <block id="6cd8bf8bc514f4f1998e5110df5d1db8" category="admonition">由於資料已分層至兩個不同的物件儲存位置、以進行分層鏡射組態、因此您必須購買具有足夠容量的授權、才能將資料分層至兩個位置。</block>
+  <block id="f457a5079118a07f91a021318abf923e" category="list-text">使用System Manager或CLI安裝及設定ONTAP 您的靜態叢集ONTAP 。</block>
+  <block id="a91bdb81c68f1a37a469fa1d5933a14b" category="paragraph">此時請勿設定分層。</block>
+  <block id="a49fb32c3dc821374473edfc6c43950a" category="inline-link-macro">購買雲端分層授權</block>
+  <block id="1bde59815d02b55060d6e8d13346a689" category="list-text"><block ref="7f252ad1d739a8ecccf6d5db96c80d7b" category="inline-link-macro-rx"></block> 以取得新叢集或叢集所需的容量。</block>
+  <block id="cd545dee97443a0461021080f3101dc7" category="inline-link-macro">將授權新增至Digital Wallet</block>
+  <block id="25b9b4168a6301bf6c9a74727e1b576b" category="list-text">在Cloud Manager中、 <block ref="fe2e5134b9c10f1de1aa1ca1472fd7e2" category="inline-link-macro-rx"></block>。</block>
+  <block id="2ef78cf4a1d7bf5f762483337e16bb3b" category="inline-link-macro">探索新叢集</block>
+  <block id="8ba93d5fbdf24a09ecf1780c63d1122d" category="list-text">在雲端分層、 <block ref="7e9f01463f0c1bdc0791002bcf190788" category="inline-link-macro-rx"></block>。</block>
+  <block id="2577e5e77f7a58d0996e4f2dd6bcb05e" category="list-text">在叢集儀表板中、按一下 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 針對叢集、選取*部署授權*。</block>
+  <block id="b84ead730259e42d0aaa3247f1351b36" category="inline-image-macro">快照顯示如何將分層授權部署至ONTAP 某個叢集。</block>
+  <block id="54cfdff2d2e56824adbc46c622ea54b0" category="paragraph"><block ref="54cfdff2d2e56824adbc46c622ea54b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d6cde62acc90805ee457b7dc44915c98" category="list-text">在「_部署授權_」對話方塊中、按一下「*部署*」。</block>
+  <block id="9b0c8b391da3036b3219d496d996a102" category="paragraph">子授權會部署至ONTAP 整個叢集。</block>
+  <block id="8b0a08ec64fa62214a614acb1efe653a" category="list-text">返回System Manager或ONTAP the不確定的CLI、然後設定分層組態。</block>
+  <block id="4bd3288276aa6f67f33d76d6902047a2" category="inline-link">鏡射組態資訊FabricPool</block>
+  <block id="72c2d35b547a9f20d83b2001c0deb1de" category="paragraph"><block ref="72c2d35b547a9f20d83b2001c0deb1de" category="inline-link-rx"></block></block>
+  <block id="653000cdcda1dc1026b9ce4d1c8f33bd" category="inline-link">分層至IBM Cloud Object Storage資訊</block>
+  <block id="5bc01400af176dafcc4180cd4038b69d" category="paragraph"><block ref="5bc01400af176dafcc4180cd4038b69d" category="inline-link-rx"></block></block>
 </blocks>

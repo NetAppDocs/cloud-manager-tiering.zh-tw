@@ -39,7 +39,7 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 === 支援哪些類型的不完整系統？ONTAP
 
-支援從功能性、功能性和功能性等系統進行雲端分層AFF 。FAS ONTAP Select
+單節點和高可用度AFF 的堆疊支援雲端分層功能、包括：FAS ONTAP Select也支援使用「鏡射鏡射」組態的叢集FabricPool 、但組態必須使用System Manager或ONTAP CLI來完成。
 
 
 
@@ -76,7 +76,15 @@ NOTE: 如果叢集執行 ONTAP 的是 32 或更新版本、雲端分層可在 HD
 
 === 支援哪些物件儲存供應商？
 
-支援Amazon S3、Azure Blob儲存設備、Google Cloud Storage、NetApp StorageGRID 功能區和S3相容的物件儲存供應商。
+雲端分層支援下列物件儲存供應商：
+
+* Amazon S3
+* Microsoft Azure Blob
+* Google Cloud Storage
+* NetApp StorageGRID
+* S3相容的物件儲存設備
+* IBM Cloud物件儲存設備（FabricPool 但必須使用System Manager或ONTAP CLI完成此功能的不實組態設定）
+
 
 
 

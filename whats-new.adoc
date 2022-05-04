@@ -18,13 +18,23 @@ summary: 瞭解雲端分層的新功能。
 
 
 
+== 2022年5月3日
+
+
+
+=== 雲端分層授權支援、可用於其他叢集組態
+
+雲端分層授權現在可與分層鏡射組態（不含MetroCluster 非功能組態）的叢集、以及分層至IBM Cloud Object Storage的叢集共享。您不再需要在FabricPool 這些情況下使用過時的不再使用的功能介紹授權。如此一來、您就能更輕鬆地在更多叢集上使用「浮動」雲端分層授權。 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["瞭解如何授權及設定這些類型的叢集。"]
+
+
+
 == 2022年4月4日
 
 
 
 === Amazon S3 Glacier立即擷取儲存類別現已推出
 
-設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。
+設定雲端分層時、現在您可以設定生命週期規則、讓非使用中的資料在特定天數後從_Standard_儲存類別轉換為_Glacier即時擷取。這將有助於降低AWS基礎架構成本。 https://docs.netapp.com/us-en/cloud-manager-tiering/reference-aws-support.html["請參閱支援的S3儲存類別。"]
 
 
 
