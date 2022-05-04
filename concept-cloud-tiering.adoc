@@ -54,7 +54,7 @@ TIP: 從 Cloud Tiering 讀取系統。 Cloud Volumes ONTAP https://docs.netapp.c
 * NetApp StorageGRID
 
 
-雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。必須使用System Manager或不含任何功能的CLI來完成此組態設定、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用雲端分層來完成。"]
+雲端分層授權也可與叢集共享、這些叢集會將資料分層儲存至IBM Cloud Object Storage。此功能必須使用System Manager或CLI完成、FabricPool ONTAP 但是 https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations["此類組態的授權是使用雲端分層來完成。"]
 
 
 NOTE: 您可以將資料從NAS磁碟區分層到公有雲或私有雲、例如StorageGRID ：在分層SAN傳輸協定存取的資料時、NetApp建議使用私有雲端、因為連線考量。
