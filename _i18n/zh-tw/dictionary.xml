@@ -324,9 +324,6 @@
   <block id="a315b97ead114b01711324b00318fede" category="paragraph">雲端分層支援資料分層至_Standard_、_Nearlin__、_Coldlin__和_Archive_儲存類別。請參閱 <block ref="7bf35a231ca3eab0ba1eb206f6515726" category="inline-link-macro-rx"></block> 以取得更多詳細資料。</block>
   <block id="cbf85819c0ec3bd08aea6103a838e42f" category="section-title">雲端分層會將一個物件存放區用於整個叢集、還是每個 Aggregate 使用一個物件存放區？</block>
   <block id="cb8d52e5219592f36bdfb68231d97d04" category="paragraph">一個物件存放區用於整個叢集。</block>
-  <block id="bda5b6e359cdbe29207c5288673c5583" category="section-title">我可以將原則套用到物件存放區、以便在分層不受限制的情況下移動資料嗎？</block>
-  <block id="76897a6305088a3a5d1fece5a33249ea" category="paragraph">是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。</block>
-  <block id="984a9d1964e75fac051f5e1514887373" category="paragraph">生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</block>
   <block id="fe4a785cf549e843e958f443c4baf0fe" category="section-title">連接器</block>
   <block id="417cf0f3678f81efde443c4a85c2acb8" category="section-title">連接器需要安裝在何處？</block>
   <block id="ca4f429ffa25591e74f6645a3406d7cd" category="list-text">將資料分層至S3時、連接器可位於AWS VPC或內部部署環境中。</block>
@@ -1021,9 +1018,7 @@
   <block id="75e192e543376cd0700d28d7707c1400" category="section-title">當您將磁碟區從同一個叢集中的某個節點移至另一個節點時、階層式資料會發生什麼事？</block>
   <block id="c8e8c3de3c7e9a3523115f25ca436702" category="paragraph">如果目的地Aggregate沒有附加的雲端層、則會從來源Aggregate的雲端層讀取資料、並完全寫入目的地Aggregate的本機層。如果目的地Aggregate具有附加的雲端層、則會從來源Aggregate的雲端層讀取資料、然後先寫入目的地Aggregate的本機層、以利快速轉換。之後、根據所使用的分層原則、將其寫入雲端層。</block>
   <block id="4eb0e04ff79ba8e58d2cc578b23ac20a" category="paragraph">從ONTAP S地理 資訊9.6開始、如果目的地Aggregate使用與來源Aggregate相同的雲端層、則Cold資料不會移回本機層。</block>
-  <block id="67c448fda360e613a946c8d4f3fe8903" category="section-title">我該如何將階層式資料重新放回內部部署？</block>
   <block id="594e5f8f87d3f9aee64730282f1d9d11" category="inline-link-macro">瞭解如何將資料移回效能層</block>
-  <block id="4f73c67002a9ff6531da278f92c08e2e" category="paragraph">回寫通常是針對讀取執行、視分層原則類型而定。在使用完整套磁碟區9.8之前ONTAP 、您可以透過Volume Move操作來寫回整個磁碟區。9.8之後、分層UI有選項可以*恢復所有資料*或*恢復作用中的檔案系統*。 <block ref="5fc989c9b1011f539a0df96bd559f635" category="inline-link-macro-rx"></block>。</block>
   <block id="5b9fbe75fbcd16763752424288950fad" category="section-title">以新的AFF/FAS控制器取代現有的AFF/FAS控制器時、階層式資料是否會在內部部署上重新移轉？</block>
   <block id="954ab271743046342c8c477272ccf1e2" category="paragraph">不可以在「標頭交換」程序中、唯一需要變更的是集合體的擁有權。在這種情況下、它將會變更為新的控制器、而不會有任何資料移動。</block>
   <block id="9ae27577765a14f9c236003effe69e5e" category="section-title">在災難恢復情況下、我可以使用階層式資料來恢復磁碟區或系統嗎？</block>
@@ -1097,4 +1092,10 @@
   <block id="de865f0ebc8f66fc8e1331d7e2a7f1d4" category="list-text"><block ref="2efc8cc4b2027ed3eb0bfad94737c839" category="inline-link-macro-rx"></block>。</block>
   <block id="5904ecfefb0147d2c35e92234f70dbd9" category="paragraph">下列組態的叢集可使用雲端分層授權、但套用授權的方式必須不同於一般的單節點和HA組態的等叢集：ONTAP ONTAP</block>
   <block id="4bf0695d13fdb9614e4d0abba617654f" category="paragraph">目前不支援使用「鏡射」的組態MetroCluster FabricPool</block>
+  <block id="6ace93b12d62dd3912b132e79298337d" category="section-title">雲端分層如何影響磁碟區容量？</block>
+  <block id="9edbed19ba22406e2515654036d6d7af" category="paragraph">雲端分層不會影響磁碟區的容量、而是會影響到集合體的效能層使用量。</block>
+  <block id="bd661fa541ade4c845ce21fee80a6364" category="section-title">雲端分層是否支援使用生命週期管理原則？</block>
+  <block id="ab432a40ce280c4620566a0570350625" category="paragraph">是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</block>
+  <block id="864bccaf8b856c65bcec49d71eaad8e6" category="section-title">如何將階層式資料重新放回內部部署的效能層級？</block>
+  <block id="f8677b4c8b811cc562ebfa540cd716ff" category="paragraph">回寫通常是針對讀取執行、視分層原則類型而定。在使用完SUR9.8之前ONTAP 、您可以使用_volume mov移動_作業來寫回整個Volume。從ONTAP SFlash 9.8開始、分層使用者介面有選項可以*恢復所有資料*或*恢復作用中的檔案系統*。 <block ref="5fc989c9b1011f539a0df96bd559f635" category="inline-link-macro-rx"></block>。</block>
 </blocks>
