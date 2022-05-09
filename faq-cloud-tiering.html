@@ -691,7 +691,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-04 19:48:49 +0000">05/04/2022</time>
+    <time datetime="2022-05-09 15:06:38 +0000">05/09/2022</time>
     
   
 
@@ -782,6 +782,12 @@
 <h3 id="雲端分層如何決定哪些區塊要分層至雲端">雲端分層如何決定哪些區塊要分層至雲端？</h3>
 <div class="paragraph">
 <p>與磁碟區相關的分層原則、是控制哪些區塊分層及何時分層的機制。原則定義資料區塊類型（快照、使用者資料或兩者）和冷卻期間。請參閱 <a href="concept-cloud-tiering.html#volume-tiering-policies">"Volume分層原則"</a> 以取得詳細資料。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="雲端分層如何影響磁碟區容量">雲端分層如何影響磁碟區容量？</h3>
+<div class="paragraph">
+<p>雲端分層不會影響磁碟區的容量、而是會影響到集合體的效能層使用量。</p>
 </div>
 </div>
 <div class="sect2">
@@ -1020,6 +1026,12 @@
 </div>
 </div>
 <div class="sect2">
+<h3 id="雲端分層是否支援使用生命週期管理原則">雲端分層是否支援使用生命週期管理原則？</h3>
+<div class="paragraph">
+<p>是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="雲端分層會將一個物件存放區用於整個叢集還是每個-aggregate-使用一個物件存放區">雲端分層會將一個物件存放區用於整個叢集、還是每個 Aggregate 使用一個物件存放區？</h3>
 <div class="paragraph">
 <p>一個物件存放區用於整個叢集。</p>
@@ -1053,9 +1065,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="我該如何將階層式資料重新放回內部部署">我該如何將階層式資料重新放回內部部署？</h3>
+<h3 id="如何將階層式資料重新放回內部部署的效能層級">如何將階層式資料重新放回內部部署的效能層級？</h3>
 <div class="paragraph">
-<p>回寫通常是針對讀取執行、視分層原則類型而定。在使用完整套磁碟區9.8之前ONTAP 、您可以透過Volume Move操作來寫回整個磁碟區。9.8之後、分層UI有選項可以*恢復所有資料*或*恢復作用中的檔案系統*。 <a href="task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier">"瞭解如何將資料移回效能層"</a>。</p>
+<p>回寫通常是針對讀取執行、視分層原則類型而定。在使用完SUR9.8之前ONTAP 、您可以使用_volume mov移動_作業來寫回整個Volume。從ONTAP SFlash 9.8開始、分層使用者介面有選項可以*恢復所有資料*或*恢復作用中的檔案系統*。 <a href="task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier">"瞭解如何將資料移回效能層"</a>。</p>
 </div>
 </div>
 <div class="sect2">
@@ -1074,15 +1086,6 @@
 <h3 id="我可以使用雲端供應商的主控台或物件儲存資源探查器來查看階層至儲存庫的資料嗎我是否可以直接使用儲存在物件儲存區中的資料而無需ontap-使用任何功能">我可以使用雲端供應商的主控台或物件儲存資源探查器來查看階層至儲存庫的資料嗎？我是否可以直接使用儲存在物件儲存區中的資料、而無需ONTAP 使用任何功能？</h3>
 <div class="paragraph">
 <p>不可以建構並分層至雲端的物件不包含單一檔案、但最多可包含1、024個4 KB區塊、可與多個檔案區塊相同。磁碟區的中繼資料永遠保留在本機層上。</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="我可以將原則套用到物件存放區以便在分層不受限制的情況下移動資料嗎">我可以將原則套用到物件存放區、以便在分層不受限制的情況下移動資料嗎？</h3>
-<div class="paragraph">
-<p>是的。您可以啟用生命週期管理、以便在特定天數後、將資料從預設儲存類別/存取層移轉至更具成本效益的層級。</p>
-</div>
-<div class="paragraph">
-<p>生命週期規則會套用至Amazon S3和Google Cloud儲存設備所選儲存區中的所有物件、以及Azure Blob所選儲存帳戶中的所有容器。</p>
 </div>
 </div>
 </div>
@@ -1335,16 +1338,16 @@
               <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">條款與條件</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a class="ot-sdk-show-settings">cookie-settings</a>
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
             </li>
           </ul>
         </div>
