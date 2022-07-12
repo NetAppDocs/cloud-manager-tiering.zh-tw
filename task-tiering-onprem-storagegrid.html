@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/zh-tw/cloud-manager-tiering/search.html"
           data-type="widget" 
-          data-placeholder="搜尋文件" 
-          data-no-results-found="找不到符合 {query} 的相關結果。" 
-          data-did-you-mean="搜尋 {suggestion}。" 
-          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
-          data-results-found="找到 {hitCount} 筆結果"  
+          data-placeholder="搜尋文件"
+          data-no-results-found="找不到符合 {query} 的相關結果。"
+          data-did-you-mean="搜尋 {suggestion}。"
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？"
+          data-results-found="找到 {hitCount} 筆結果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -669,7 +671,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:04:06 +0000">05/03/2022</time>
+    <time datetime="2022-07-12 16:07:47 +0000">07/12/2022</time>
     
   
 
@@ -776,7 +778,7 @@ Connector 與 StorageGRID 物件之間的通訊僅供物件儲存設定之用。
 <div class="ulist">
 <ul>
 <li>
-<p>透過使用者指定的連接埠、由支援物件叢集啟動 HTTPS 連線（連接埠可在分層設定期間設定） ONTAP StorageGRID 。</p>
+<p>透過使用者指定的連接埠、這個支援叢集會啟動HTTPS連線至物件閘道節點（連接埠可在分層設定期間設定）ONTAP StorageGRID 。</p>
 <div class="paragraph">
 <p>可在物件儲存設備中讀取及寫入資料。 ONTAP物件儲存設備從未啟動、只是回應而已。</p>
 </div>
@@ -926,7 +928,7 @@ Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功�
 <p><a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html" target="_blank" rel="noopener">"內部部署工作環境"</a>。</p>
 </li>
 <li>
-<p>將用於HTTPS通訊的伺服StorageGRID 器FQDN和連接埠。</p>
+<p>用來進行HTTPS通訊的FQDN、以及連接埠。StorageGRID</p>
 </li>
 <li>
 <p>具備所需 S3 權限的 AWS 存取金鑰。</p>
@@ -953,7 +955,7 @@ Cloud Tiering 支援 FlexGroup 從 ONTAP 功能完善的 9.5 開始的各種功�
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><strong>伺服器</strong>：輸入StorageGRID 支援此功能的伺服器的FQDN、ONTAP 搭配StorageGRID 使用此功能進行HTTPS通訊時應使用的連接埠、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。</p>
+<p><strong>伺服器</strong>：輸入StorageGRID 「支援不支援功能的閘道節點」的FQDN、ONTAP 該連接埠應用於與StorageGRID 效益管理系統進行HTTPS通訊、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。</p>
 </li>
 <li>
 <p>* Bucket <strong>：新增儲存區或選取以前置字元_Fabric集區_開頭的現有儲存區、然後按一下*繼續</strong>。</p>
