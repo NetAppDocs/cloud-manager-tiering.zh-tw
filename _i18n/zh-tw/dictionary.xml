@@ -541,7 +541,6 @@
   <block id="d819d0403e81c7160cb438c3a5d9a3c4" category="paragraph">將資料分層至異地時、您的叢集必須符合下列要求。 ONTAP StorageGRID</block>
   <block id="0b9c6eef4e3d3a222eb04e910d252339" category="list-text">授權</block>
   <block id="9cda06c7df5991375adfd503e3cc7329" category="list-text">您的Cloud Manager帳戶不需要Cloud Tiering授權、FabricPool 也不需要ONTAP 在將資料分層StorageGRID 至無法使用的情況下、在這個叢集上使用非功能性授權。</block>
-  <block id="90f0a3a28474de656c0a9aff945622b8" category="list-text">透過使用者指定的連接埠、由支援物件叢集啟動 HTTPS 連線（連接埠可在分層設定期間設定） ONTAP StorageGRID 。</block>
   <block id="b00b6421202892ef9c6f947253e944b4" category="list-text">連接器必須駐留在內部環境中、因此需要傳入連線。</block>
   <block id="32c974abc8de44f817076a1e8eb5d4c8" category="paragraph">您必須先在ONTAP Cloud Manager畫版中建立內部的功能性環境、才能開始分層處理冷資料。</block>
   <block id="6be12c1b6627a3a9bb2aa4cb185fc866" category="section-title">準備 StorageGRID</block>
@@ -557,12 +556,10 @@
   <block id="a3049b761ff526799f3b1881932b1c8c" category="list-text">透過連接埠 443 連線至 StorageGRID 支援的 HTTPS 連線</block>
   <block id="de9570886e9849852133b61caefd03b2" category="section-title">將非作用中資料從第一個叢集分層到 StorageGRID 不活動資料</block>
   <block id="a71f0f53c9824602e78a79bc5fa52d43" category="paragraph">準備好環境之後、請從第一個叢集開始分層處理非作用中資料。</block>
-  <block id="d30a5cb40eea3a32f653b4e43b30bbf1" category="list-text">將用於HTTPS通訊的伺服StorageGRID 器FQDN和連接埠。</block>
   <block id="1b8a3756b590cb811f9726f247097028" category="list-text">具備所需 S3 權限的 AWS 存取金鑰。</block>
   <block id="85cd1fc1600a51fdeb99ebc5121fa64e" category="inline-image-macro">螢幕擷取畫面顯示選取內部 ONTAP 環境後、畫面右側會出現「設定分層」選項。</block>
   <block id="23d57e0aa543c12cc6f2de0e1d5a38fb" category="paragraph"><block ref="23d57e0aa543c12cc6f2de0e1d5a38fb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b9a857184ba34b2173935c63cafd8508" category="list-text">*選擇您的供應商*：選擇* StorageGRID 《*》*、然後按一下*「繼續*」。</block>
-  <block id="7206fa4dd4f20feee98bcfa09c10759c" category="list-text">*伺服器*：輸入StorageGRID 支援此功能的伺服器的FQDN、ONTAP 搭配StorageGRID 使用此功能進行HTTPS通訊時應使用的連接埠、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。</block>
   <block id="4014800981ed7ad3b1ab16a5a86574ce" category="list-text">* Bucket *：新增儲存區或選取以前置字元_Fabric集區_開頭的現有儲存區、然後按一下*繼續*。</block>
   <block id="65baf260014f5ed41f70e43c8bae3790" category="list-text">* 叢集網路 * ：選取 ONTAP 要用於連接物件儲存設備的 IPspace 、然後按一下 * 繼續 * 。</block>
   <block id="6770c476e7cf4e5329f4a574f524ae3a" category="paragraph">選擇正確的IPspace可確保Cloud Tiering能夠設定從ONTAP 物件儲存到物件StorageGRID 儲存的連線。</block>
@@ -1099,4 +1096,7 @@
   <block id="7598b57246c073bebfc5a46a79eecdd5" category="list-text">每個叢集都會自動安裝「子」分層授權、以便與「父」授權通訊。</block>
   <block id="fbad6353250385bdb538aa04a8ef4983" category="admonition">系統管理員或ONTAP CLI中顯示的「子」授權容量和到期日並非真實資訊、因此若資訊不相同、請勿擔心。這些價值是由Cloud Tiering軟體內部管理。實際資訊會在Digital Wallet中追蹤。</block>
   <block id="8646b811e05af9f8486c9225ac0c39f3" category="paragraph">請注意、由於資料已分層至兩個不同的物件儲存位置、以供分層鏡射組態使用、因此您必須購買具有足夠容量的授權、才能將資料分層至兩個位置。</block>
+  <block id="d356e706a5a76e1d07d019ae07df9f40" category="list-text">透過使用者指定的連接埠、這個支援叢集會啟動HTTPS連線至物件閘道節點（連接埠可在分層設定期間設定）ONTAP StorageGRID 。</block>
+  <block id="8763f6e8f73d9edf1525960ebd813b27" category="list-text">用來進行HTTPS通訊的FQDN、以及連接埠。StorageGRID</block>
+  <block id="c880a19df6feb2c1dcf1bda2267bb2be" category="list-text">*伺服器*：輸入StorageGRID 「支援不支援功能的閘道節點」的FQDN、ONTAP 該連接埠應用於與StorageGRID 效益管理系統進行HTTPS通訊、以及具備所需S3權限之帳戶的存取金鑰和秘密金鑰。</block>
 </blocks>
